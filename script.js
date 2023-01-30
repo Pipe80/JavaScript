@@ -31,10 +31,12 @@ console.log(typeof country);
 
 const now=2023;
 const agePipe=now-1980;
-const ageSarah=now-2018;
+const ageSarah=now-2010;
 console.log(ageSarah, agePipe);
 console.log(ageSarah *2, ageSarah / 2, 2**3);
 //2**3 is 3=2*2*2
+console.log(ageSarah >=18);
+
 
 
 
