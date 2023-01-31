@@ -172,3 +172,63 @@ console.log(koalas);
 if (dolphins > koalas) {console.log('Dolphins wins!');}
 if (koalas === dolphins) {console.log('Its a tie');}
 if (koalas > dolphins) {console.log('Koalas wins!');}  
+
+//the conditional (ternary) operator
+const age=23;
+// age>=18?console.log('adult😀'):
+// console.log('teenager😂');
+
+const drink= age >=18 ? 'coffee':
+'water';
+console.log(drink);
+console.log(`I like to drink: ${drink}`);
+
+// Coding Challenge #4
+// Steven wants to build a very simple tip calculator for whenever he goes eating in a
+// restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+// 300. If the value is different, the tip is 20%.
+// Your tasks:
+// 1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+// this. It's not allowed to use an if/else statement � (If it's easier for you, you can
+// start with an if/else statement, and then try to convert it to a ternary
+// operator!)
+// 2. Print a string to the console containing the bill value, the tip, and the final value
+// (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+// 316.25”
+// Test data:
+// § Data 1: Test for bill values 275, 40 and 430
+// Hints:
+// § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+// § Value X is between 50 and 300, if it's >= 50 && <= 300 �
+
+// const tipUsual=0.15; //50-300
+// const tipMore=0.2; //alle 50 tai yli 300
+// const billOne=275;
+// const billTwo=40;
+// const billThree=430;
+
+// console.log(`The bill was ${billOne}, the tip was ${tipUsual}, and the total value ${tipUsual*billOne}`);
+
+//TÄSSÄ ALLA OLI OMA RATKAISUNI TEHTÄVÄÄN JA MIETIN, KUINKA OLISIN RATKAISSUT TEHTÄVÄN NIIN, ETTÄ SE OLISI 
+//YHDESSÄ OSASSA RATKAISSUT KAIKKI, MIETIN || VAIHTOEHTONA, MUTTA PÄÄDYIN ALLA OLEVAAN.
+
+// const tip=1.5;
+// const tip2=2.0;
+// const bil=275;
+// const bil2=40;
+// const bil3=430;
+
+// const check= bil >=300 ? `${bil*tip2}`:
+// `${bil*tip}`;
+// const check2= bil2 <=50 ? `${bil2*tip2}`:
+// `${bil2*tip}`;
+
+// console.log(`I like to have a check: ${check}`);
+// console.log(`I like to have a check: ${check2}`);
+
+//OIKEA RATKAISU
+const bill=275;
+const tip = bill<=300 && bill>=50 ? bill * .15 :
+bill * .2;
+console.log(`The bill was ${bill}, the tip was ${tip} and 
+the total value ${tip + bill}`);
